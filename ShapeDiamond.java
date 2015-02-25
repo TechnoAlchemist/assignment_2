@@ -8,19 +8,47 @@ public class ShapeDiamond {
 
     Scanner scan = new Scanner(System.in);
     int num;
-    String diamond;
 
-    System.out.println("Welcome to Diamond Cutter where take integers and shape them into a diamond patter.");
+    System.out.println("Welcome to Diamond Cutter where we display the pattern of *.");
     
     System.out.print("Please enter a number: ");
     num = scan.nextInt();
 
-    String numString = Integer.toString(num);
+    for (int i = 1; i <= num; i++) {
 
-    diamond = String.format("%" + numString.length() + "s", "").replace(' ', '*');
+      for (int j = 0; j < (num - 1); j++) {
+        System.out.print(" ");
+      }
 
-    System.out.println(diamond);
+      for (int j = 1; j <= i; j++) {
+        System.out.print("*");
+      }
 
+      for (int k = 1; k < i; k++) {
+        System.out.print("*");
+      }
+
+      System.out.println();
+    }
+
+    for (int i = num - 1; i >= 1; i--) {
+
+      for (int j = 0; j < (num - 1); j++) {
+        System.out.print(" ");
+      }
+
+      for (int j = 1; j <= i; j++) {
+        System.out.print("*");
+      }
+
+      for (int k = 1; k < i; k++) {
+        System.out.print("*");
+      }
+
+      System.out.println();
+    }
+
+    System.out.println();
 
   }
 }
