@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Daltons2 {
 
@@ -10,17 +11,28 @@ public class Daltons2 {
 
     Scanner scan = new Scanner(System.in);
 
-    System.out.println("We are going to sort the Dalton bros according to height");
+    System.out.println("We are going to sort the Dalton bros according to height (inches) ");
 
     // need to initialize the array values here
-      for (int j = 0; j < names.length; j++) {
-        System.out.print("Enter the height of " + names[j] + ": " );
-        brothers[j] = scan.nextInt();
-      }
+    for (int index = 0; index < names.length; index++) {
+      System.out.print("Enter the height of " + names[index] + ": " );
+      brothers[index] = scan.nextInt();
+    }
 
     // print the array values
-    for (int j = 0; j < names.length; j++) {
-      System.out.print(names[j] + ": " + brothers[j]);
+    System.out.println("The Brothers' heights in Ascending order are: ");
+
+    for (int index = 0; index < names.length; index++) {
+      Arrays.sort(brothers);
+      System.out.print(names[index] + ": " + brothers[index] + " inches.");
+    System.out.println();
+    }
+
+    System.out.println("The Brothers' heights in Descending order are: ");
+
+    for (int index = names.length - 1; index >= 0; index--) {
+      Arrays.sort(brothers);
+      System.out.print(names[index] + ": " + brothers[index] + " inches.");
     System.out.println();
     }
   }
