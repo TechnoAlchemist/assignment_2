@@ -13,19 +13,15 @@ public class Daltons2 {
     System.out.println("We are going to sort the Dalton bros according to height");
 
     // need to initialize the array values here
-    for (int i = 0; i < names.length; i++) {
-      for (int j = 0; j <= i; j++) {
-        System.out.print("Enter the height of " + names[i] + ": " );
+      for (int j = 0; j < names.length; j++) {
+        System.out.print("Enter the height of " + names[j] + ": " );
         brothers[j] = scan.nextInt();
       }
-    }
 
     // print the array values
-   for (int i = 0; i < names.length; i++) {
-    for (int j = 0; j <= i; j++) {
-      System.out.print(names[i] + ": \t" + brothers[j]);
+    for (int j = 0; j < names.length; j++) {
+      System.out.print(names[j] + ": " + brothers[j]);
     System.out.println();
     }
-   }
   }
 }
