@@ -1,3 +1,5 @@
+/* Gabe Lafontant glafonta@gmail */
+
 import java.util.Scanner;
 
 public class PrimeMenu {
@@ -25,7 +27,9 @@ public class PrimeMenu {
         continue;
       }
 
-      System.out.println("The prime number is: " + i + " and the count is: " + count);
+      System.out.println("The prime number is " + i + "\nThe number of times it is divisible " +  
+        "by the prime number is " + count);
+
     }
   } 
 }
